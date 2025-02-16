@@ -7,7 +7,7 @@ import pool, { initDB } from "./db.js";
 
 const app = express();
 
-const whitelist = [process.env.CLIENT_URL];
+const whitelist = process.env.CLIENT_URL;
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
